@@ -1,13 +1,16 @@
 import './App.css';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
-import Header from './components/Home/Header'
+import Home from './components/Home/Home'
+import ProjectPreview from './components/Home/ProjectPreview';
 
 function App() {
   return (
     <Router>
       <Switch>
         <Route exact path="/">
-          <Header></Header>
+          <Home></Home>
+          <ProjectPreview></ProjectPreview>
+          {/* <Header></Header> */}
         </Route>
       </Switch>
     </Router>

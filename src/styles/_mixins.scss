@@ -1,0 +1,5 @@
+@mixin flexCenter {
+  @apply flex;
+  @apply items-center;
+  @apply justify-center;
+}
