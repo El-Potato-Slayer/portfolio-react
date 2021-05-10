@@ -1,4 +1,3 @@
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import Particles from 'react-particles-js';
 import particles from '../../assets/particles'
 

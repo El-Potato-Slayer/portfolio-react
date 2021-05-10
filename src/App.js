@@ -8,8 +8,11 @@ function App() {
     <Router>
       <Switch>
         <Route exact path="/">
-          <Home></Home>
-          <ProjectPreview></ProjectPreview>
+          <div className="snap">
+            <Home></Home>
+            <ProjectPreview></ProjectPreview>
+
+          </div>
           {/* <Header></Header> */}
         </Route>
       </Switch>

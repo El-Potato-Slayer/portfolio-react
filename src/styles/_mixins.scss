@@ -3,3 +3,7 @@
   @apply items-center;
   @apply justify-center;
 }
+
+@mixin backgroundImage($fileName) {
+  background-image: url('./assets/#{$fileName}');
+}

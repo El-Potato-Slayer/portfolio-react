@@ -1,0 +1,18 @@
+main{
+  background: url('./assets/starry-dark.png');
+  // transform: scaleY(-1);
+  // filter: FlipV;
+  // -ms-filter: "FlipV";
+  height: 100vh;
+
+  @apply flex;
+  @apply items-center;
+  @apply flex-col;
+  @apply text-white;
+  
+  h2{
+    @apply text-4xl;
+    @apply my-8;
+  }
+
+}
