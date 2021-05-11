@@ -2,7 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 header {
-  background: url("./assets/starry-dark.png");
+  @apply bg-black;
+  @apply overflow-hidden;
   height: 100vh;
 }
 
@@ -15,13 +16,32 @@ header div {
   @apply h-full;
 }
 
-header div h1 {
-  @apply text-6xl;
-  @apply mb-4;
+header div h1,
+header div h2 {
+  @apply relative;
+  @apply overflow-hidden;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  display: block;
+  stroke-dasharray: 50px;
 }
 
-header div h2 {
-  @apply text-2xl;
+header div h1::before,
+header div h2::before {
+  @apply absolute;
+  content: '';
+  left: 10%;
+  width: 120%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(5%, transparent), to(transparent));
+  background: linear-gradient(90deg, transparent 0%, transparent 5%, transparent 100%);
+}
+
+header video {
+  position: absolute;
+  top: 2%;
+  left: 1%;
 }
 
 .particles {
@@ -29,9 +49,41 @@ header div h2 {
   height: 100%;
 }
 
+@media (min-aspect-ratio: 16 / 9) {
+  video {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-aspect-ratio: 16 / 9) {
+  video {
+    width: auto;
+    height: 100%;
+  }
+}
+
+.intro-text path {
+  -webkit-animation: fill 0.5s ease forwards 8.8s;
+          animation: fill 0.5s ease forwards 8.8s;
+}
+
+@-webkit-keyframes fill {
+  to {
+    fill: white;
+    opacity: 0.92;
+  }
+}
+
+@keyframes fill {
+  to {
+    fill: white;
+    opacity: 0.92;
+  }
+}
+
 main {
   background: url("./assets/starry-dark.png");
-  height: 100vh;
   @apply flex;
   @apply items-center;
   @apply flex-col;
@@ -39,8 +91,8 @@ main {
 }
 
 main h2 {
-  @apply text-4xl;
-  @apply my-8;
+  @apply mt-12;
+  @apply mb-8;
 }
 
 .card {
@@ -161,18 +213,5 @@ main h2 {
   @apply text-base;
   @apply font-semibold;
   color: rgba(255, 255, 255, 0.9);
-}
-
-.snap {
-  height: 100vh;
-  overflow: auto;
-  -ms-scroll-snap-type: block mandatory;
-      scroll-snap-type: block mandatory;
-  scroll-behavior: smooth;
-}
-
-.snap > * {
-  height: 100vh;
-  scroll-snap-align: center;
 }
 /*# sourceMappingURL=index.css.map */

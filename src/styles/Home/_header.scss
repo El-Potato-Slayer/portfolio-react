@@ -1,21 +1,40 @@
 
 
 header{
-  background: url('./assets/starry-dark.png');
+  // background: url('./assets/starry-dark.png');
+  @apply bg-black;
+  @apply overflow-hidden;
   height: 100vh;
-
+  
   div {
     @include flexCenter();
     @apply flex-col;
     @apply text-white;
     @apply h-full;
-    h1 {
-      @apply text-6xl;
-      @apply mb-4;
+
+    h1,
+    h2 {
+      @apply relative;
+      @apply overflow-hidden;
+      width: max-content;
+      display: block;
+      stroke-dasharray: 50px;
+      
+      &::before{
+        @apply absolute;
+        content: '';
+        left: 10%;
+        width: 120%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent 0%, transparent 5%,  transparent 100%);
+      }
     }
-    h2{
-      @apply text-2xl;
-    }
+  }
+
+  video{
+    position: absolute;
+    top: 2%;
+    left: 1%;
   }
 
 }
@@ -23,4 +42,18 @@ header{
 .particles{
   width: 100%;
   height: 100%;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  video {
+      width:100%;
+      height: auto;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  video {
+      width:auto;
+      height: 100%;
+  }
 }

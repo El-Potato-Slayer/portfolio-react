@@ -3,16 +3,15 @@ main{
   // transform: scaleY(-1);
   // filter: FlipV;
   // -ms-filter: "FlipV";
-  height: 100vh;
-
   @apply flex;
   @apply items-center;
   @apply flex-col;
   @apply text-white;
   
   h2{
-    @apply text-4xl;
-    @apply my-8;
+    // @apply text-4xl;
+    @apply mt-12;
+    @apply mb-8;
   }
 
 }

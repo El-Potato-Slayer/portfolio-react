@@ -4,17 +4,28 @@
 
 @import './styles/mixins';
 @import './styles/Home/header';
+@import './styles/Home/intro-text';
 @import './styles/Home/project-preview';
 @import './styles/components/card';
 
 .snap{
-  height: 100vh;
-  overflow: auto;
-  scroll-snap-type: block mandatory;
-  scroll-behavior: smooth;
+  // height: 100vh;
+  // overflow-y: scroll;
+  // scroll-snap-type: y mandatory;
+  // scroll-behavior: smooth;
 
-  & > *{
-    height: 100vh;
-    scroll-snap-align: center;
-  }
+  // & > *{
+  //   height: 100vh;
+  //   scroll-snap-align: center;
+  // }
+
+  
 }
+
+// @media only screen and (min-width: 1024px) {
+//   .snap {
+//     & > * {
+//       height: 100vh;
+//     }
+//   }
+// }
