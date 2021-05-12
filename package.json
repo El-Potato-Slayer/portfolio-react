@@ -1,5 +1,6 @@
 {
   "name": "portfolio",
+  "homepage": "https://el-potato-slayer.github.io/portfolio-react",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -8,6 +9,7 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "firebase": "^8.5.0",
+    "gh-pages": "^3.1.0",
     "node-sass": "^6.0.0",
     "react": "17.0.1",
     "react-dom": "17.0.1",
@@ -19,6 +21,8 @@
   "scripts": {
     "start": "craco start",
     "build": "craco build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "craco test",
     "eject": "react-scripts eject"
   },
