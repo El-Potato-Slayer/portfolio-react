@@ -1,14 +1,24 @@
+import { useState } from 'react';
+import { unmountComponentAtNode } from 'react-dom';
 import Particles from 'react-particles-js';
 import particles from '../../assets/particles'
-import Vid from '../../assets/intro-vid.mp4'
 import IntroText from './IntroText'
+import IntroVideo from './IntroVideo';
 
 function Header() {
+  const [isVidPlaying, setVidPlaying] = useState(true)
+  setTimeout(() => {
+    setVidPlaying(false)
+  }, 9000)
+  
+  
   return (
     <header className="relative">
-        <video autoPlay muted>
-          <source src={Vid} type="video/mp4"/>
-        </video>
+      {
+        isVidPlaying && <IntroVideo></IntroVideo> 
+      }
+              
+      {!isVidPlaying && <Particles className="particles absolute"/>}
       {/* <Particles className="particles absolute" params={particles}/> */}
       {/* <div className="relative header-text">
         <h1 className="text-3xl 2xs:text-4xl xs:text-5xl lg:text-6xl xs:mb-2">Whaddup, I'm Chad</h1>

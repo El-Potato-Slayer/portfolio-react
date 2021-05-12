@@ -9,10 +9,10 @@ function IntroText() {
       paths[i].style.strokeDashoffset = paths[i].getTotalLength();
       paths[i].animate([{ strokeDashoffset: 0}],{
         delay: 2000,
-        duration: 6000,
+        duration: 6000 + offset,
         fill: "forwards"
       })
-      offset += 400
+      offset += 50
     
     }
 

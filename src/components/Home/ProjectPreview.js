@@ -31,7 +31,7 @@ function ProjectPreview() {
         {
           retrieved && projects.map(project => {
             return (
-              <Project project={project}></Project>
+              <Project key={project.title.toString()} project={project}></Project>
             )
           })
         }

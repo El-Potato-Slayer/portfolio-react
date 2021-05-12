@@ -1,11 +1,10 @@
+import Vid from '../../assets/intro-vid.mp4'
 
 function IntroVideo() {
   return (
-    <div className="vid-container">
-      <video autoPlay="true" loop="false" muted>
-        <source src="../../assets/intro-vid.mp4"/>
-      </video>
-    </div>
+    <video autoPlay muted id="introVideo">
+      <source src={Vid} type="video/mp4"/>
+    </video>
   );
 }
 

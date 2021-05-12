@@ -1,6 +1,25 @@
 $green: hsl(142, 90%, 61%);
 $line-padding: 1.5rem;
 
+// .card {
+//   color: $green;
+//   background-size: cover;
+//   padding: 8rem 0 0;
+//   max-width: 28ch;
+// }
+
+// @media (hover:hover) {
+//   .card-content{
+//     padding: $line-padding;
+//     background: linear-gradient(
+//       rgba(0, 0, 0, 0),
+//       rgba(0, 0, 0, 0.5) 20%,
+//       rgba(0, 0, 0, 1),
+//     );
+//   }
+// }
+
+
 .card {
   // @include backgroundImage('project-1.png'); 
   @apply text-white; 
@@ -116,4 +135,6 @@ $line-padding: 1.5rem;
   @apply text-base;
   @apply font-semibold;
   color: rgba(255, 255, 255, 0.9);
+  font-weight: 300;
+  font-size: 0.90em;
 }

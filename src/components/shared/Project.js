@@ -1,9 +1,9 @@
 function Project(prop) {
   const project = prop.project
   return (
-      <div className="card mx-4 my-4" style={{ 
-        backgroundImage: `url("${project.image}")` 
-      }}>
+    <div className="card mx-4 my-4" style={{ 
+      backgroundImage: `url("${project.image}")` 
+    }}>
       <div className="card-content" >
         <h3 className="card-title">{project.title}</h3>
         <p className="card-body">{project.description}</p>

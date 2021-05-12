@@ -47,6 +47,29 @@ header video {
 .particles {
   width: 100%;
   height: 100%;
+  background: url("./assets/bg2.jpg");
+  background-size: cover;
+  background-position: bottom;
+  -webkit-animation: fadeIn 3s ease forwards;
+          animation: fadeIn 3s ease forwards;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @media (min-aspect-ratio: 16 / 9) {
@@ -83,7 +106,9 @@ header video {
 }
 
 main {
-  background: url("./assets/starry-dark.png");
+  background: url("./assets/bg3.jpg");
+  background-size: cover;
+  background-position: top;
   @apply flex;
   @apply items-center;
   @apply flex-col;
@@ -213,5 +238,17 @@ main h2 {
   @apply text-base;
   @apply font-semibold;
   color: rgba(255, 255, 255, 0.9);
+  font-weight: 300;
+  font-size: 0.90em;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+@media only screen and (min-width: 1024px) {
+  .snap > * {
+    height: 100vh;
+  }
 }
 /*# sourceMappingURL=index.css.map */

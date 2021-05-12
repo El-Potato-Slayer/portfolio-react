@@ -7,3 +7,10 @@
 @mixin backgroundImage($fileName) {
   background-image: url('./assets/#{$fileName}');
 }
+
+@mixin fadeInElement {
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+}

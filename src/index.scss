@@ -8,6 +8,10 @@
 @import './styles/Home/project-preview';
 @import './styles/components/card';
 
+body{
+  font-family: 'Poppins', sans-serif;;
+}
+
 .snap{
   // height: 100vh;
   // overflow-y: scroll;
@@ -22,10 +26,10 @@
   
 }
 
-// @media only screen and (min-width: 1024px) {
-//   .snap {
-//     & > * {
-//       height: 100vh;
-//     }
-//   }
-// }
+@media only screen and (min-width: 1024px) {
+  .snap {
+    & > * {
+      height: 100vh;
+    }
+  }
+}
