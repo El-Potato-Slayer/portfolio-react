@@ -36,7 +36,7 @@ function ProjectPreview() {
           })
         }
       </section>
-      <Link className="neon-button my-8" to="/projects">All projects</Link>
+      <Link className="neon-button my-4" to="/projects">All projects</Link>
     </main>
   );
 }
