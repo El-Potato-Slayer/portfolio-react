@@ -1,6 +1,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.navbar {
+  @apply absolute;
+  @apply bg-transparent;
+  @apply text-white;
+  @apply border-t;
+  @apply border-b;
+  @apply border-white;
+  @apply py-3;
+  top: 5%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -5%);
+          transform: translate(-50%, -5%);
+  z-index: 1;
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
+}
+
+.nav-link {
+  @apply px-3;
+  @apply py-3;
+  position: relative;
+  z-index: 1;
+}
+
 header {
   @apply bg-black;
   @apply overflow-hidden;

@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @import './styles/mixins';
+@import './styles/components/navbar';
 @import './styles/Home/header';
 @import './styles/Home/intro-text';
 @import './styles/Home/project-preview';
