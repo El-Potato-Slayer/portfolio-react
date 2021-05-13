@@ -304,39 +304,63 @@ main h2 {
   @apply text-white;
   @apply flex-col;
   @apply text-center;
+  @apply px-4;
   @apply flex;
   @apply items-center;
   @apply justify-center;
   gap: 3rem;
   min-height: 100vh;
-  background: url("./assets/bg6.jpg") top;
+  background: url("./assets/bg7.jpg");
+  background-position: top;
   background-size: cover;
 }
 
 .about-me p {
-  width: 50ch;
+  max-width: 50ch;
   opacity: 0.9;
+}
+
+@media only screen and (min-width: 768px) {
+  .about-me {
+    background-position: bottom;
+  }
 }
 
 .contact-icons {
   @apply flex;
   @apply items-center;
   @apply justify-center;
-  gap: 0.5rem;
+  gap: 1rem;
+}
+
+.contact-icons a {
+  -webkit-transition: background 200ms ease-in-out;
+  transition: background 200ms ease-in-out;
+  border: 0.125rem solid white;
+  border-radius: 0.75em;
 }
 
 @media (hover) {
-  .contact-icons .icon:hover {
-    background: white;
+  .contact-icons a:hover,
+  .contact-icons a:focus {
+    background: rgba(255, 255, 255, 0.95);
     fill-opacity: 1;
   }
-  .contact-icons .icon:hover:nth-of-type(1):hover path, .contact-icons .icon:hover:nth-of-type(2):hover path {
+  .contact-icons a:hover:nth-of-type(1):hover path, .contact-icons a:hover:nth-of-type(1):focus path, .contact-icons a:hover:nth-of-type(2):hover path, .contact-icons a:hover:nth-of-type(2):focus path,
+  .contact-icons a:focus:nth-of-type(1):hover path,
+  .contact-icons a:focus:nth-of-type(1):focus path,
+  .contact-icons a:focus:nth-of-type(2):hover path,
+  .contact-icons a:focus:nth-of-type(2):focus path {
     fill: #1A1E22;
   }
-  .contact-icons .icon:hover:nth-of-type(3):hover path {
+  .contact-icons a:hover:nth-of-type(3):hover path, .contact-icons a:hover:nth-of-type(3):focus path,
+  .contact-icons a:focus:nth-of-type(3):hover path,
+  .contact-icons a:focus:nth-of-type(3):focus path {
     fill: #0073B1;
   }
-  .contact-icons .icon:hover:nth-of-type(4):hover path {
+  .contact-icons a:hover:nth-of-type(4):hover path, .contact-icons a:hover:nth-of-type(4):focus path,
+  .contact-icons a:focus:nth-of-type(4):hover path,
+  .contact-icons a:focus:nth-of-type(4):focus path {
     fill: #1A93E3;
   }
 }
@@ -344,8 +368,6 @@ main h2 {
 .icon {
   @apply cursor-pointer;
   width: 3rem;
-  border: 0.125rem solid white;
-  border-radius: 0.75em;
   padding: 0.5rem;
   -webkit-transition: background 200ms ease-in-out;
   transition: background 200ms ease-in-out;
