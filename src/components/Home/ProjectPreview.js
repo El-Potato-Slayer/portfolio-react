@@ -25,7 +25,7 @@ function ProjectPreview() {
   }, [])
   
   return (
-    <main className="relative">
+    <main className="relative project-preview">
       <h2 className="text-2xl 2xs:text-3xl xs:text-4xl">Some of my projects</h2>
       <section className="flex flex-wrap h-4/6 items-center justify-center">
         {
@@ -36,7 +36,7 @@ function ProjectPreview() {
           })
         }
       </section>
-      <Link className="text-black bg-white px-2 py-1 my-8" to="/projects">View all projects</Link>
+      <Link className="neon-button my-8" to="/projects">All projects</Link>
     </main>
   );
 }

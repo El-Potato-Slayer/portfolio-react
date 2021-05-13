@@ -19,8 +19,8 @@ function IntroText() {
   })
 
   return (
-    <div className="relative">
-      <svg width="378" className="intro-text" height="50" viewBox="0 0 378 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <div className="relative px-4">
+      <svg className="intro-text w-full" height="50" viewBox="0 0 378 50" fill="none" xmlns="http://www.w3.org/2000/svg">
 <mask id="path-1-outside-1" maskUnits="userSpaceOnUse" x="0.919998" y="0.479996" width="377" height="49" fill="black">
 <rect fill="white" x="0.919998" y="0.479996" width="377" height="49"/>
 <path d="M32.92 4.88V47H30.22V26.6H5.62V47H2.92V4.88H5.62V24.32H30.22V4.88H32.92Z"/>

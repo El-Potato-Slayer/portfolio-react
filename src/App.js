@@ -1,11 +1,11 @@
 import './App.css';
-import {BrowserRouter as Router, HashRouter, Route, Switch} from 'react-router-dom'
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import Home from './components/Home/Home'
 import ProjectPreview from './components/Home/ProjectPreview';
 
 function App() {
   return (
-    <HashRouter>
+    <Router>
       <Switch>
         <Route exact path="/">
           <div className="snap">
@@ -16,7 +16,7 @@ function App() {
           {/* <Header></Header> */}
         </Route>
       </Switch>
-    </HashRouter>
+    </Router>
   );
 }
 

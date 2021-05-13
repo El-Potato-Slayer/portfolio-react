@@ -47,9 +47,8 @@ header video {
 .particles {
   width: 100%;
   height: 100%;
-  background: url("./assets/bg2.jpg");
+  background: url("./assets/bg5.jpg") bottom;
   background-size: cover;
-  background-position: bottom;
   -webkit-animation: fadeIn 3s ease forwards;
           animation: fadeIn 3s ease forwards;
 }
@@ -106,18 +105,18 @@ header video {
 }
 
 main {
-  background: url("./assets/bg3.jpg");
+  background: url("./assets/bg4.jpg") center;
   background-size: cover;
-  background-position: top;
   @apply flex;
   @apply items-center;
   @apply flex-col;
   @apply text-white;
+  @apply overflow-hidden;
 }
 
 main h2 {
-  @apply mt-12;
-  @apply mb-8;
+  @apply mt-8;
+  @apply mb-4;
 }
 
 .card {
@@ -240,6 +239,65 @@ main h2 {
   color: rgba(255, 255, 255, 0.9);
   font-weight: 300;
   font-size: 0.90em;
+}
+
+.neon-button {
+  @apply cursor-pointer;
+  @apply relative;
+  font-size: 1.25rem;
+  color: #EF0888;
+  border: #EF0888 0.125em solid;
+  padding: 0.25em 1em;
+  border-radius: 0.25em;
+  z-index: 0;
+  text-shadow: 0 0 0.125em rgba(255, 255, 255, 0.3), 0 0 0.25em #ff14bd;
+  -webkit-box-shadow: inset 0 0 0.5em 0 #EF0888, 0 0 0.5em 0 #EF0888;
+          box-shadow: inset 0 0 0.5em 0 #EF0888, 0 0 0.5em 0 #EF0888;
+}
+
+.neon-button::before {
+  @apply absolute;
+  pointer-events: none;
+  content: '';
+  background: #EF0888;
+  width: 100%;
+  height: 100%;
+  top: 120%;
+  left: 0;
+  -webkit-transform: perspective(1em) rotateX(40deg) scale(1, 0.35);
+          transform: perspective(1em) rotateX(40deg) scale(1, 0.35);
+  -webkit-filter: blur(1.5em);
+          filter: blur(1.5em);
+  opacity: 0.7;
+}
+
+.neon-button::after {
+  @apply absolute;
+  content: '';
+  top: 0%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(239, 8, 136, 0.9);
+  z-index: -1;
+  -webkit-box-shadow: 0 0 1.2em 0.5em #EF0888;
+          box-shadow: 0 0 1.2em 0.5em #EF0888;
+  opacity: 0;
+  -webkit-transition: opacity 100ms linear;
+  transition: opacity 100ms linear;
+}
+
+.neon-button:hover, .neon-button:focus {
+  color: black;
+  text-shadow: none;
+}
+
+.neon-button:hover::before, .neon-button:focus::before {
+  opacity: 1;
+}
+
+.neon-button:hover::after, .neon-button:focus::after {
+  opacity: 1;
 }
 
 body {

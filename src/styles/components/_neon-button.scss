@@ -1,0 +1,66 @@
+// $neon-pink: rgb(255, 20, 189);
+$neon-pink: #EF0888;
+// $bg-pink: hsl(323, 21%, 16%)
+
+.neon-button {
+  @apply cursor-pointer;
+  @apply relative;
+  font-size: 1.25rem;
+  
+  color: $neon-pink;
+  border: $neon-pink 0.125em solid;
+  padding: 0.25em 1em;
+  border-radius: 0.25em;
+  z-index: 0;
+  text-shadow: 
+    0 0 0.125em rgba(255, 255, 255, 0.3),
+    0 0 0.25em rgb(255, 20, 189);
+  // text-shadow: 0 0 16px rgb(255, 255, 255);;
+  box-shadow: 
+    inset 0 0 0.5em 0 $neon-pink,
+    0 0 0.5em 0 $neon-pink;
+
+  &::before {
+    @apply absolute;
+    pointer-events: none;
+    content: '';
+    background: $neon-pink;
+    width: 100%;
+    height: 100%;
+    top: 120%;
+    left: 0;
+    transform: perspective(1em) rotateX(40deg) scale(1, 0.35);
+    filter: blur(1.5em);
+    opacity: 0.7;
+  }
+
+  &::after {
+    @apply absolute;
+    content: '';
+    top: 0%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(239, 8, 136, 0.9);
+    z-index: -1;
+    box-shadow: 0 0 1.2em 0.5em $neon-pink;
+    opacity: 0;
+    transition: opacity 100ms linear;
+  }
+
+  &:hover,
+  &:focus{
+    color: black;
+    text-shadow: none;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    opacity: 1;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    opacity: 1;
+  }
+}
