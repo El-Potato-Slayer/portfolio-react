@@ -4,12 +4,13 @@
 
 @import './styles/mixins';
 @import './styles/components/navbar';
+@import './styles/components/card';
+@import './styles/components/neon-button';
 @import './styles/Home/header';
 @import './styles/Home/intro-text';
 @import './styles/Home/project-preview';
-@import './styles/components/card';
-@import './styles/components/neon-button';
 @import './styles/Home/about-me';
+@import './styles/Projects/projects';
 
 body{
   font-family: 'Poppins', sans-serif;;

@@ -1,0 +1,21 @@
+.projects {
+  background: url('./assets/bg4.jpg') center;
+  @apply text-white;
+  // @include flexCenter;
+  min-height: 100vh;
+  h2{
+    @apply pt-28;
+    @apply pb-8;
+    width: max-content;
+    margin: 0 auto;
+  }
+
+  .projects-wrapper{
+    @include flexCenter;
+    @apply flex-row;
+    @apply flex-wrap;
+    // @apply pt-40;
+
+  }
+
+}
