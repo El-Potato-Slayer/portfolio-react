@@ -325,7 +325,7 @@ header video {
   @apply mb-4;
 }
 
-.about-me {
+.about-me-preview {
   @apply text-white;
   @apply flex-col;
   @apply text-center;
@@ -340,13 +340,13 @@ header video {
   background-size: cover;
 }
 
-.about-me p {
+.about-me-preview p {
   max-width: 50ch;
   opacity: 0.9;
 }
 
 @media only screen and (min-width: 768px) {
-  .about-me {
+  .about-me-preview {
     background-position: bottom;
   }
 }
@@ -426,6 +426,50 @@ header video {
   @apply justify-center;
   @apply flex-row;
   @apply flex-wrap;
+}
+
+.about-me {
+  background: black;
+  @apply flex;
+  @apply items-center;
+  @apply justify-center;
+  @apply flex-col;
+  @apply text-white;
+  @apply px-4;
+  @apply pb-16;
+  gap: 3rem;
+}
+
+.about-me h2 {
+  @apply pt-32;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0 auto;
+}
+
+.about-me p {
+  @apply text-center;
+  max-width: 50ch;
+  margin: 0 auto;
+}
+
+.about-me .stacks-wrapper {
+  @apply mt-10;
+}
+
+.about-me .stacks-wrapper h3 {
+  @apply pb-8;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0 auto;
+}
+
+.about-me .stacks-wrapper .stacks {
+  @apply grid;
+  @apply text-center;
+  gap: 1rem;
 }
 
 body {

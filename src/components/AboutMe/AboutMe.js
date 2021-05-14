@@ -1,11 +1,17 @@
+import { useEffect, useState } from "react"
+
 function AboutMe() {
+  let [retrieved, setRetrieved] = useState(false)
+  const [projects, setProjects] = useState([])
+  
   return (
-    <section className="about-me-preview">
-      <h2 className="text-2xl 2xs:text-3xl xs:text-4xl -mt-16">A Bit About Me</h2>
+    <main className="about-me">
+      <h2 className="text-3xl xs:text-4xl">About Me</h2>
       <p className="text-sm xs:text-base">
         I'm Full-Stack web developer, with experience in multiple frameworks such as ReactJS, VueJS, and Ruby on Rails. Even though I'm a Full-Stack developer, I focus specifically on Front-End. Being able to develop responsive websites that are visually-pleasing is a gratifying experience for me. <br /> <br /> 
-        I'm on the lookout for a web development job that emphasizes fast and efficient workflows. If you have an opportunity available, don't hesitate to contact me. 
+        I live in South Africa, and I'm on the lookout for a remote web development job that emphasizes fast and efficient workflows. If you have an opportunity available, don't hesitate to contact me. 
       </p>
+
       <div className="contact-icons">
         <a href="mailto:leighchad.cl@gmail.com">
           <svg version="1.1" className="icon" id="Capa_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 512 512" >
@@ -28,7 +34,23 @@ function AboutMe() {
           </svg>
         </a>
       </div>
-    </section>
+      
+      <a href="" className="neon-button">Download Resume</a>
+      <section className="stacks-wrapper">
+        <h3 className="text-3xl xs:text-4xl">Stacks I know</h3>
+        <div className="stacks grid-cols-2 sm:grid-cols-3">
+          <span>ReactJS</span>
+          <span>VueJS</span>
+          <span>Ruby On Rails</span>
+          <span>Tailwind</span>
+          <span>Bootstrap</span>
+          <span>SASS</span>
+          <span>Firestore</span>
+          <span>SQL</span>
+          <span>PostGreSQL</span>
+        </div>
+      </section>
+    </main>
   );
 }
 

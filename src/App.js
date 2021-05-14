@@ -3,6 +3,7 @@ import {BrowserRouter as Router, HashRouter, Route, Switch} from 'react-router-d
 import Home from './components/Home/Home'
 import Navbar from './components/shared/Navbar';
 import Projects from './components/Projects/Projects';
+import AboutMe from './components/AboutMe/AboutMe';
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
           <Projects></Projects>
         </Route>
         <Route path="/about-me">
-
+          <AboutMe></AboutMe>
         </Route>
       </Switch>
     </HashRouter>
