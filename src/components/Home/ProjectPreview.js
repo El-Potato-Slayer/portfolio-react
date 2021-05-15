@@ -32,7 +32,7 @@ function ProjectPreview(props) {
           })
         }
       </section>
-      <Link className="neon-button my-4" onClick={props.handlePageLoad} to="/projects">All projects</Link>
+      <Link className="neon-button my-4" onClick={() => props.handlePageLoad()} to="/projects">All projects</Link>
     </main>
   );
 }

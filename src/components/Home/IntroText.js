@@ -15,7 +15,7 @@ function IntroText(props) {
         })
         paths[i].animate([{ fill: 'white', opacity: 1}],{
           delay: 8800,
-          duration: 500,
+          duration: 2000,
           fill: "forwards"
         })
         offset += 50
@@ -23,7 +23,10 @@ function IntroText(props) {
     }
     else {
       for (let i = 0; i < paths.length; i++) {
-        paths[i].style.fill = "white"
+        paths[i].animate([{ fill: 'white', opacity: 1}],{
+          duration: 2000,
+          fill: "forwards"
+        })
       }
     }
 

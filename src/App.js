@@ -10,12 +10,12 @@ import { useState } from 'react';
 
 function App() {
   const [hasPageLoadedOnce, setPageLoaded] = useState(false)
-  const handlePageLoad = () => {
+  function handlePageLoad() {
     setPageLoaded(true)
   }
   return (
     <HashRouter>
-      <Navbar handlePageLoad={handlePageLoad}></Navbar>
+      <Navbar handlePageLoad={handlePageLoad} ></Navbar>
       <Switch>
         <Route exact path="/">
           <div className="snap">

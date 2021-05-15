@@ -7,7 +7,7 @@ function Header(props) {
     <header className="relative">
       {
         !props.hasPageLoadedOnce && (
-          <video autoPlay muted id="introVideo" onEnded={props.handlePageLoad}>
+          <video autoPlay muted id="introVideo" onEnded={() => props.handlePageLoad()}>
             <source src={Vid} type="video/mp4"/>
           </video>
         )
