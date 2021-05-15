@@ -14,16 +14,62 @@
   -webkit-transform: translate(-50%, -5%);
           transform: translate(-50%, -5%);
   z-index: 1;
-  min-width: -webkit-max-content;
-  min-width: -moz-max-content;
-  min-width: max-content;
 }
 
 .nav-link {
   @apply px-3;
   @apply py-3;
+  @apply font-semibold;
   position: relative;
   z-index: 1;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.nav-link::before,
+.nav-link::after {
+  content: '';
+  position: absolute;
+  border: 4px solid rgba(173, 151, 27, 0.808);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  z-index: -1;
+}
+
+.nav-link:hover::before,
+.nav-link:focus::before {
+  width: 30px;
+  height: 30px;
+}
+
+.nav-link:hover::after,
+.nav-link:focus::after {
+  border-width: 2px;
+  width: 40px;
+  height: 40px;
+}
+
+.nav-link:hover::before,
+.nav-link:focus::before,
+.nav-link:hover::after,
+.nav-link:focus::after {
+  opacity: 1;
+}
+
+.active-link {
+  top: 0;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  background: rgba(255, 255, 255, 0.2);
 }
 
 .card {
@@ -253,7 +299,7 @@ header video {
 .particles {
   width: 100%;
   height: 100%;
-  background: url("./assets/bg5.jpg") bottom;
+  background: url("./assets/bg1.png") bottom;
   background-size: cover;
   -webkit-animation: fadeIn 3s ease forwards;
           animation: fadeIn 3s ease forwards;

@@ -1,11 +1,15 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 function Navbar(props) {
+  const handleFocus = (e) => {
+    e.target.blur();
+  }
+  
   return (
     <nav className="navbar">
-      <Link className="nav-link" to="/">Home</Link>
-      <Link className="nav-link" onClick={props.handlePageLoad} to="/projects">Projects</Link>
-      <Link className="nav-link" onClick={props.handlePageLoad} to="about-me">About Me</Link>
+      <NavLink className="nav-link" activeClassName="active-link" exact={true} onClick={handleFocus} to="/">Home</NavLink>
+      <NavLink className="nav-link" activeClassName="active-link" onClick={props.handlePageLoad && handleFocus} to="/projects">Projects</NavLink>
+      <NavLink className="nav-link" activeClassName="active-link" onClick={props.handlePageLoad && handleFocus} to="about-me">About Me</NavLink>
     </nav>
   );
 }
