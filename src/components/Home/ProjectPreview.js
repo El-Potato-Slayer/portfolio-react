@@ -3,7 +3,7 @@ import db from '../../firebase.config'
 import React, { useState, useEffect } from 'react'
 import Project from '../shared/Project'
 
-function ProjectPreview() {
+function ProjectPreview(props) {
   let [retrieved, setRetrieved] = useState(false)
   const [projects, setProjects] = useState([])
   
@@ -32,7 +32,7 @@ function ProjectPreview() {
           })
         }
       </section>
-      <Link className="neon-button my-4" to="/projects">All projects</Link>
+      <Link className="neon-button my-4" onClick={props.handlePageLoad} to="/projects">All projects</Link>
     </main>
   );
 }

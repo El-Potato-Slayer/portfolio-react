@@ -19,12 +19,10 @@ function App() {
       <Switch>
         <Route exact path="/">
           <div className="snap">
-            {/* <Home></Home> */}
             <Header handlePageLoad={handlePageLoad} hasPageLoadedOnce={hasPageLoadedOnce}></Header>
-            <ProjectPreview></ProjectPreview>
+            <ProjectPreview handlePageLoad={handlePageLoad}></ProjectPreview>
             <AboutMePreview></AboutMePreview>
           </div>
-          {/* <Header></Header> */}
         </Route>
         <Route path="/projects">
           <Projects></Projects>
