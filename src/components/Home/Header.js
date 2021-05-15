@@ -1,6 +1,7 @@
 import Particles from 'react-particles-js';
 import IntroText from './IntroText'
 import Vid from '../../assets/intro-vid.mp4'
+import { BrowserView, isMobile } from 'react-device-detect';
 
 function Header(props) {
   return (
@@ -12,8 +13,7 @@ function Header(props) {
           </video>
         )
       }
-              
-      {props.hasPageLoadedOnce && <Particles className="particles absolute"/>}
+      {props.hasPageLoadedOnce && !isMobile && <Particles className="particles absolute"/>}
       <IntroText className="relative" hasPageLoadedOnce={props.hasPageLoadedOnce}></IntroText>
     </header>
   );

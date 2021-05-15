@@ -1,9 +1,10 @@
 import { useEffect } from "react";
+import { isMobile } from "react-device-detect";
 
 function IntroText(props) {
   useEffect(() => {
     const paths = document.querySelectorAll('.intro-text path')
-    if (!props.hasPageLoadedOnce) {
+    if (!props.hasPageLoadedOnce && !isMobile) {
       let offset = 0
       for (let i = 0; i < paths.length; i++) {
         paths[i].style.strokeDasharray = paths[i].getTotalLength();
