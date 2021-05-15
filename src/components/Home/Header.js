@@ -7,13 +7,20 @@ function Header(props) {
   return (
     <header className="relative">
       {
-        !props.hasPageLoadedOnce && (
+         !props.hasPageLoadedOnce && (
           <video autoPlay muted id="introVideo" onEnded={() => props.handlePageLoad()}>
             <source src={Vid} type="video/mp4"/>
           </video>
         )
       }
-      {props.hasPageLoadedOnce && !isMobile && <Particles className="particles absolute"/>}
+      {
+        props.hasPageLoadedOnce && 
+        <div className="particles absolute">
+          {
+            !isMobile && <Particles className=""/>
+          }  
+        </div>
+      }
       <IntroText className="relative" hasPageLoadedOnce={props.hasPageLoadedOnce}></IntroText>
     </header>
   );
