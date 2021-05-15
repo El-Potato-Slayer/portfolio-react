@@ -1,4 +1,4 @@
-function AboutMe() {
+function AboutMePreview() {
   return (
     <section className="about-me-preview">
       <h2 className="text-2xl 2xs:text-3xl xs:text-4xl -mt-16">A Bit About Me</h2>
@@ -32,4 +32,4 @@ function AboutMe() {
   );
 }
 
-export default AboutMe;
+export default AboutMePreview;

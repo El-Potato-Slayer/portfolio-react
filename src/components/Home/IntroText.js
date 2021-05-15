@@ -1,22 +1,34 @@
 import { useEffect } from "react";
 
-function IntroText() {
+function IntroText(props) {
   useEffect(() => {
-    const paths = document.querySelectorAll('.intro-text > path')
-    let offset = 0
-    for (let i = 0; i < paths.length; i++) {
-      paths[i].style.strokeDasharray = paths[i].getTotalLength();
-      paths[i].style.strokeDashoffset = paths[i].getTotalLength();
-      paths[i].animate([{ strokeDashoffset: 0}],{
-        delay: 2000,
-        duration: 6000 + offset,
-        fill: "forwards"
-      })
-      offset += 50
-    
+    const paths = document.querySelectorAll('.intro-text path')
+    if (!props.hasPageLoadedOnce) {
+      let offset = 0
+      for (let i = 0; i < paths.length; i++) {
+        paths[i].style.strokeDasharray = paths[i].getTotalLength();
+        paths[i].style.strokeDashoffset = paths[i].getTotalLength();
+        paths[i].animate([{ strokeDashoffset: 0}],{
+          delay: 2000,
+          duration: 6000 + offset,
+          fill: "forwards"
+        })
+        paths[i].animate([{ fill: 'white', opacity: 1}],{
+          delay: 8800,
+          duration: 500,
+          fill: "forwards"
+        })
+        offset += 50
+      }
+    }
+    else {
+      for (let i = 0; i < paths.length; i++) {
+        paths[i].style.fill = "white"
+        
+      }
     }
 
-  })
+  }, [])
 
   return (
     <div className="relative px-4">
