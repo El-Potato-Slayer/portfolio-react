@@ -15,10 +15,6 @@ function ProjectPreview() {
       for (let i = 0; i < 3; i++) {
         setProjects(projects => [...projects, data.docs[i].data()])        
       }
-      // data.docs.forEach(item => {
-      //   // projects.push(item.data())
-      //   setProjects(projects => [...projects, item.data()])
-      // })
       setRetrieved(true)
     }
     fetchProjects();
