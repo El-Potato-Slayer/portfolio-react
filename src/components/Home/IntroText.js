@@ -24,7 +24,6 @@ function IntroText(props) {
     else {
       for (let i = 0; i < paths.length; i++) {
         paths[i].style.fill = "white"
-        
       }
     }
 

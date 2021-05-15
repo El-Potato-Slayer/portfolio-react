@@ -1,5 +1,4 @@
 .about-me{
-  // background: url('./assets/bg7.jpg') bottom;
   background: black;
   @include flexCenter;
   @apply flex-col;
@@ -9,7 +8,6 @@
   gap: 3rem;
   h2{
     @apply pt-32;
-    // @apply pb-8;
     width: max-content;
     margin: 0 auto;
   }
@@ -29,9 +27,6 @@
     }
     
     .stacks{
-      // @include flexCenter;
-      // @apply flex-wrap;
-      // gap: 1rem;
       @apply grid;
       @apply text-center;
       gap: 1rem;

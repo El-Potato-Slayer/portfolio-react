@@ -1,27 +1,7 @@
 $green: hsl(142, 90%, 61%);
 $line-padding: 1.5rem;
 
-// .card {
-//   color: $green;
-//   background-size: cover;
-//   padding: 8rem 0 0;
-//   max-width: 28ch;
-// }
-
-// @media (hover:hover) {
-//   .card-content{
-//     padding: $line-padding;
-//     background: linear-gradient(
-//       rgba(0, 0, 0, 0),
-//       rgba(0, 0, 0, 0.5) 20%,
-//       rgba(0, 0, 0, 1),
-//     );
-//   }
-// }
-
-
 .card {
-  // @include backgroundImage('project-1.png'); 
   @apply text-white; 
   @apply bg-cover;
   @apply overflow-hidden;
@@ -30,13 +10,7 @@ $line-padding: 1.5rem;
   border-radius: 0.5rem;
   transition: transform 500ms ease-in-out;
   height: max-content;
-  // object-fit: fill;
-  // background-image: url('./assets/project-1.png');
 }
-
-// .card:nth-of-type(2) {
-//   @include backgroundImage('project-2.png')
-// } 
 
 .card-content{
   padding: $line-padding;
@@ -59,7 +33,6 @@ $line-padding: 1.5rem;
     text-decoration: none;
     background-color: $green;
     border-radius: 0.25rem;
-    // padding: 0.5em 1.25em;
   }
 
   .button:hover,

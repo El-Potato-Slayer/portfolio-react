@@ -1,10 +1,6 @@
 .project-preview{
-  // background: url('./assets/starry-dark.png');
   background: url('./assets/bg4.jpg') center;
   background-size: cover;
-  // transform: scaleY(-1);
-  // filter: FlipV;
-  // -ms-filter: "FlipV";
   @apply flex;
   @apply items-center;
   @apply flex-col;
@@ -12,7 +8,6 @@
   @apply overflow-hidden;
   
   h2{
-    // @apply text-4xl;
     @apply mt-8;
     @apply mb-4;
   }

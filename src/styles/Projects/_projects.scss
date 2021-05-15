@@ -1,7 +1,6 @@
 .projects {
   background: url('./assets/bg4.jpg') center;
   @apply text-white;
-  // @include flexCenter;
   min-height: 100vh;
   h2{
     @apply pt-28;
@@ -14,8 +13,6 @@
     @include flexCenter;
     @apply flex-row;
     @apply flex-wrap;
-    // @apply pt-40;
-
   }
 
 }
