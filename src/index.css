@@ -299,13 +299,18 @@ header video {
   left: 1%;
 }
 
-.particles {
+.particles-wrapper {
   width: 100%;
   height: 100%;
   background: url("./assets/bg1.png") bottom;
   background-size: cover;
   -webkit-animation: fadeIn 3s ease forwards;
           animation: fadeIn 3s ease forwards;
+}
+
+.particles {
+  width: 100%;
+  height: 100%;
 }
 
 @-webkit-keyframes fadeIn {

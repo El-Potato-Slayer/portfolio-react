@@ -15,9 +15,9 @@ function Header(props) {
       }
       {
         props.hasPageLoadedOnce && 
-        <div className="particles absolute">
+        <div className="particles-wrapper absolute">
           {
-            !isMobile && <Particles className=""/>
+            !isMobile && <Particles className="particles"/>
           }  
         </div>
       }
