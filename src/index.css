@@ -447,7 +447,7 @@ header video {
 }
 
 .projects h2 {
-  @apply pt-28;
+  @apply pt-32;
   @apply pb-8;
   width: -webkit-max-content;
   width: -moz-max-content;
