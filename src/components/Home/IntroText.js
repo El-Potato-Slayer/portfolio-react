@@ -34,7 +34,7 @@ function IntroText(props) {
   })
 
   return (
-    <div className="relative px-4">
+    <div>
       <svg className="intro-text w-full" height="50" viewBox="0 0 378 50" fill="none" xmlns="http://www.w3.org/2000/svg">
         <mask id="path-1-outside-1" maskUnits="userSpaceOnUse" x="0.919998" y="0.479996" width="377" height="49" fill="black">
         <rect fill="white" x="0.919998" y="0.479996" width="377" height="49"/>

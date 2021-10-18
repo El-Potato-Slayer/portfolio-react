@@ -38,9 +38,9 @@ $neon-pink: #EF0888;
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(239, 8, 136, 0.9);
+    background: rgba(239, 8, 136, 0.8);
     z-index: -1;
-    box-shadow: 0 0 1.2em 0.5em $neon-pink;
+    box-shadow: 0 0 1.2em 0.3em $neon-pink;
     opacity: 0;
     transition: opacity 100ms linear;
   }

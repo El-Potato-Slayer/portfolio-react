@@ -3,8 +3,8 @@ function AboutMe() {
     <main className="about-me">
       <h2 className="text-3xl xs:text-4xl">About Me</h2>
       <p className="text-sm xs:text-base">
-        I'm Full-Stack web developer, with experience in multiple frameworks such as ReactJS, VueJS, and Ruby on Rails. Even though I'm a Full-Stack developer, I focus specifically on Front-End. Being able to develop responsive websites that are visually-pleasing is a gratifying experience for me. <br /> <br /> 
-        I live in South Africa, and I'm on the lookout for a remote web development job that emphasizes fast and efficient workflows. If you have an opportunity available, don't hesitate to contact me. 
+        I'm a full-stack web developer with experience in multiple frameworks such as ReactJS, VueJS, and Ruby on Rails. I have a preference for front-end development and love being able to develop responsive websites that are visually-pleasing. I find it to be a very gratifying experience. <br /> <br /> 
+        I'm on the lookout for a web development job that emphasizes fast and efficient workflows. If you have an opportunity available, don't hesitate to contact me. 
       </p>
 
       <div className="contact-icons">
@@ -30,7 +30,7 @@ function AboutMe() {
         </a>
       </div>
       
-      <a href="https://firebasestorage.googleapis.com/v0/b/portfolio-f2af8.appspot.com/o/Resume.pdf?alt=media&token=b6ce1a1f-0a1b-4ed5-96e6-a0cfb98e0543" target="_blank" rel="noreferrer" className="neon-button">My Resume</a>
+      <a href="https://firebasestorage.googleapis.com/v0/b/portfolio-f2af8.appspot.com/o/Resume%20improvements(3).pdf?alt=media&token=cab4de78-e35d-4949-bc02-e80c8b2ff05e" target="_blank" rel="noreferrer" className="neon-button">My Resume</a>
       <section className="stacks-wrapper">
         <h3 className="text-3xl xs:text-4xl">Stacks I know</h3>
         <div className="stacks grid-cols-2 sm:grid-cols-3">

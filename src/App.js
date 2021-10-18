@@ -7,6 +7,7 @@ import Header from './components/Home/Header';
 import ProjectPreview from './components/Home/ProjectPreview';
 import AboutMePreview from './components/Home/AboutMePreview';
 import { useState } from 'react';
+import ScrollToTop from './javascript/ScrollToTop';
 
 function App() {
   const [hasPageLoadedOnce, setPageLoaded] = useState(false)
@@ -15,13 +16,14 @@ function App() {
   }
   return (
     <HashRouter>
+      <ScrollToTop></ScrollToTop>
       <Navbar handlePageLoad={handlePageLoad} ></Navbar>
       <Switch>
         <Route exact path="/">
           <div className="snap">
             <Header handlePageLoad={handlePageLoad} hasPageLoadedOnce={hasPageLoadedOnce}></Header>
             <ProjectPreview handlePageLoad={handlePageLoad}></ProjectPreview>
-            <AboutMePreview></AboutMePreview>
+            <AboutMePreview handlePageLoad={handlePageLoad}></AboutMePreview>
           </div>
         </Route>
         <Route path="/projects">
