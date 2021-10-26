@@ -1,5 +1,5 @@
 import './App.css';
-import {BrowserRouter as Router, HashRouter, Route, Switch} from 'react-router-dom'
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import Navbar from './components/shared/Navbar';
 import Projects from './components/Projects/Projects';
 import AboutMe from './components/AboutMe/AboutMe';
@@ -15,7 +15,7 @@ function App() {
     setPageLoaded(true)
   }
   return (
-    <HashRouter>
+    <Router>
       <ScrollToTop></ScrollToTop>
       <Navbar handlePageLoad={handlePageLoad} ></Navbar>
       <Switch>
@@ -33,7 +33,7 @@ function App() {
           <AboutMe></AboutMe>
         </Route>
       </Switch>
-    </HashRouter>
+    </Router>
   );
 }
 
