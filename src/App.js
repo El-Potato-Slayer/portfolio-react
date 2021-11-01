@@ -15,7 +15,7 @@ function App() {
     setPageLoaded(true)
   }
   return (
-    <Router>
+    <>
       <ScrollToTop></ScrollToTop>
       <Navbar handlePageLoad={handlePageLoad} ></Navbar>
       <Switch>
@@ -33,7 +33,7 @@ function App() {
           <AboutMe></AboutMe>
         </Route>
       </Switch>
-    </Router>
+    </>
   );
 }
 
