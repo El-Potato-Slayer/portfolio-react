@@ -1,7 +1,7 @@
 import {Link} from 'react-router-dom'
 import Project from '../shared/Project'
 import { useSelector } from 'react-redux'
-import { shortenedArray } from '../../helpers'
+import { shortenedArray } from '../../helpers/index.js'
 
 function ProjectPreview(props) {
   const { projects } = useSelector((state) => state.projectsReducer)
